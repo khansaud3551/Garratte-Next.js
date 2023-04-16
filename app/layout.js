@@ -20,6 +20,13 @@ export default function RootLayout({ children }) {
           <Header />
         </div>
         <div className="container mx-auto">{children}</div>
+        <img
+          src="
+      assets/footer.gif"
+          className="w-[650px] mx-auto"
+          alt=""
+        />
+        <p className="text-center text-xl mb-5">Copyright @ 2023</p>
       </body>
     </html>
   );

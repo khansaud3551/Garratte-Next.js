@@ -29,13 +29,6 @@ export default function Home() {
           <p>Content for section 2</p>
         </FAQ>
       </div>
-      <img
-        src="
-      assets/footer.gif"
-        className="w-[650px] mx-auto"
-        alt=""
-      />
-      <p className="text-center text-xl mb-5">Copyright @ 2023</p>
     </main>
   );
 }
