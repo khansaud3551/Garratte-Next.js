@@ -25,3 +25,30 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.accordion {
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.accordion-title {
+  padding: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+}
+
+.accordion-content {
+  padding: 14px;
+  background-color: black;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}

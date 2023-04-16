@@ -1,4 +1,5 @@
 import React from "react";
+import FAQ from "./FAQ";
 
 const AwarenessBanner = () => {
   return (
@@ -16,28 +17,34 @@ const AwarenessBanner = () => {
             will learn to create a 6 figure agency working from anywhere in the
             world.
           </p>
-          <div className="flex gap-5">
-            <button className="px-9 font-bold text-xl py-5 rounded-xl bg-primary">
-              Join ManageHer
+          <div className="flex flex-col md:flex-row items-center gap-5">
+            <button className="px-8 font-bold text-xl py-4 rounded-xl bg-primary">
+              Join ManageHers
             </button>
-            <div className="flex">
+            <div className="flex ml-4">
               <img
                 className="w-[60px] h-[60px]  rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img1.png"
                 alt=""
               />
               <img
-                className="w-[60px] h-[60px] rounded-full object-cover border border-primary/80"
+                className="w-[60px] h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img2.png"
                 alt=""
               />
               <img
-                className="w-[60px] h-[60px] rounded-full object-cover border border-primary/80"
+                className="w-[60px] h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img3.png"
                 alt=""
               />
-              <div>
-                <h1>Only $199</h1>
+              <div className="max-w-[200px] ml-3 space-y-3">
+                <div className="flex">
+                  <img src="assets/fullstar.svg" alt="" />
+                  <img src="assets/fullstar.svg" alt="" />
+                  <img src="assets/fullstar.svg" alt="" />
+                  <img src="assets/fullstar.svg" alt="" />
+                  <img src="assets/halfstar.svg" alt="" />
+                </div>
                 <p>1,700 people like you have purchased this product!</p>
               </div>
             </div>
@@ -160,6 +167,30 @@ const AwarenessBanner = () => {
           </div>
         </div>
       </div>
+      <div className="bg-black w-full lg:w-[730px] mx-auto my-14 md:my-28">
+        <FAQ title="Is this course suitable for beginners?">
+          <p>
+            Yes, our course is suitable for all levels. We have lessons ranging
+            from beginner to advanced, so no matter what your current level of
+            proficiency is, you'll be able to find lessons that are tailored to
+            your needs.
+          </p>
+        </FAQ>
+        <FAQ title="How long does the course take to complete?">
+          <p>Content for section 2</p>
+        </FAQ>
+        <FAQ title="Section 3">
+          <p>Content for section 3</p>
+        </FAQ>
+      </div>
+      {/* footer */}
+      <img
+        src="
+      assets/footer.gif"
+        className="w-[650px] mx-auto"
+        alt=""
+      />
+      <p className="text-center text-xl mb-5">Copyright @ 2023</p>
     </div>
   );
 };
