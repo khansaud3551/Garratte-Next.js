@@ -4,8 +4,10 @@ const Decision = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 my-14 md:my-28">
       <div className="md:col-span-8 md:pr-14 py-3 space-y-3 md:self-center">
-        <h1 className="text-xl text-primary font-bold">Become a Manager</h1>
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-2xl text-primary font-semibold">
+          Become a Manager
+        </h1>
+        <h1 className="text-3xl font-semibold">
           Ready to take your skills to the next level?
         </h1>
 
@@ -19,7 +21,7 @@ const Decision = () => {
         </p>
       </div>
       <div className="md:col-span-4 ">
-        <div className="mx-auto md:ml-auto rounded-xl max-w-[380px] space-y-6 border-primary border-t-[3px]">
+        <div className="card_shadow mx-auto md:ml-auto rounded-xl max-w-[380px] space-y-6 border-primary border-t-[3px]">
           <div className="mx-auto flex flex-col items-center space-y-10 pt-10">
             <h1 className="text-3xl font-medium">ONE PAYMENT ONLY!</h1>
 
@@ -51,10 +53,11 @@ const Decision = () => {
               <h1 className="text-5xl font-bold">$999</h1>
             </div>
           </div>
-
-          <button className="bg-primary p-10 w-full text-white rounded-xl rounded-t-none font-semibold text-lg">
-            Enroll now
-          </button>
+          <div className="px-2">
+            <button className="bg-primary p-10 w-full text-white rounded-xl rounded-t-none font-semibold text-lg">
+              Enroll now
+            </button>
+          </div>
         </div>
       </div>
     </div>

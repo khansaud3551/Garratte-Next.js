@@ -25,6 +25,9 @@ export default function Home() {
         <FAQ title="Section 3">
           <p>Content for section 3</p>
         </FAQ>
+        <FAQ title="How long does the course take to complete?">
+          <p>Content for section 2</p>
+        </FAQ>
       </div>
       <img
         src="

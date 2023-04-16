@@ -3,8 +3,8 @@ import React from "react";
 const Consideration = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 my-14 md:my-28">
-      <div className="md:col-span-7 space-y-4 md:pr-14 py-3">
-        <h1 className="text-3xl font-bold">Who is this course for?</h1>
+      <div className="md:col-span-7 text-lg space-y-4 md:pr-14 py-3">
+        <h1 className="text-3xl font-semibold">Who is this course for?</h1>
         <p className="text-lg">
           Our comprehensive course covers a wide range of topics, from beginner
           to advanced, so no matter what level you’re at, you’ll be able to find
@@ -24,14 +24,21 @@ const Consideration = () => {
         <div className="flex gap-3 items-center">
           <img src="/assets/tick.svg" alt="" />
           <p>
-            Newcomers looking to learn one of the fastest growing and profitable
-            business models out now.
+            Managers that need the extra push and knowledge to take their agency
+            to the next level.
+          </p>
+        </div>
+        <div className="flex gap-3 items-center">
+          <img src="/assets/tick.svg" alt="" />
+          <p>
+            Managers that are experienced but still feel like they are missing
+            the pieces of the puzzle to scale their agency at a consistent rate.
           </p>
         </div>
       </div>
       <div className="md:col-span-5 ">
         <img
-          className="rounded-xl h-full"
+          className="rounded-xl h-full object-cover"
           src="assets/img_content.jpg
     "
           alt=""

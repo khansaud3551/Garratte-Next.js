@@ -1,12 +1,13 @@
 import React from "react";
 import FAQ from "./FAQ";
+import VerticalSlider from "./VerticalSlider";
 
 const AwarenessBanner = () => {
   return (
-    <div className="grid my-5">
+    <div className="grid my-5 md:mt-[-20px]">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div
-          className="md:col-span-7 max-w-[645px] space-y-10 md:ml-[-10px]"
+          className="md:col-span-7 pt-12 max-w-[645px] space-y-10 md:ml-[-10px]"
           style={{ lineHeight: "initial" }}
         >
           <h1 className="text-5xl md:text-[70px] font-bold ">
@@ -51,7 +52,9 @@ const AwarenessBanner = () => {
           </div>
         </div>
         <div className="md:col-span-5 mt-10 md:mt-0">
-          <div className="bg-secondary-light mx-auto md:ml-auto w-full md:w-[350px] h-[500px]"></div>
+          <div className=" md:ml-auto w-full md:w-[380px] h-[500px]">
+            <VerticalSlider />
+          </div>
         </div>
       </div>
 
@@ -98,3 +101,20 @@ const AwarenessCard = ({ title, description, icon }) => {
 };
 
 export default AwarenessBanner;
+
+{
+  /* <div key={review.id} className="p-4 bg-black shadow-md rounded h-[350px] ">
+  <div className="flex gap-6">
+    <img
+      className="w-[50px] min-w-[50px] h-[50px]  rounded-full object-cover border border-primary/80"
+      src={review.img}
+      alt=""
+    />
+    <div>
+      <h2 className="text-lg font-semibold">{review.name}</h2>
+
+      <p className="mt-2">{review.review}</p>
+    </div>
+  </div>
+</div>; */
+}

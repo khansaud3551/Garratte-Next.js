@@ -26,6 +26,19 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.header {
+  background: #010003;
+  box-shadow: 0px 5px 50px rgba(255, 57, 189, 0.1);
+}
+
+.card_shadow {
+  background: #000000;
+  box-shadow: -5px -5px 50px rgba(255, 57, 189, 0.05),
+    5px 5px 50px rgba(255, 57, 189, 0.05);
+  border-radius: 12px 12px 0px 0px;
+}
+
+/* Accordion */
 .accordion {
   border-radius: 3px;
   overflow: hidden;

@@ -15,9 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${maven_Pro.className}  container mx-auto `}>
-        <Header />
-        {children}
+      <body className={`${maven_Pro.className} `}>
+        <div className="header relative">
+          <Header />
+        </div>
+        <div className="container mx-auto">{children}</div>
       </body>
     </html>
   );

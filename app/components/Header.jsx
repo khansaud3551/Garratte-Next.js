@@ -32,8 +32,8 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <nav className="bg-black pt-8 pb-20">
+    <div className="container mx-auto">
+      <nav className="pt-8 pb-10">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
@@ -60,7 +60,7 @@ const Header = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <button className="rounded-lg text-xl px-10 py-2 bg-[#424242]">
+            <button className="rounded-2xl text-white font-semibold text-2xl px-14 py-3 bg-[#424242]">
               Join Now
             </button>
           </div>
