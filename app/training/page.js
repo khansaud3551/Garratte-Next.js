@@ -23,7 +23,6 @@ const page = () => {
 
   const handleModalSubmit = (formData) => {
     console.log("Form data:", formData);
-    // Process form data as needed
   };
 
   return (
