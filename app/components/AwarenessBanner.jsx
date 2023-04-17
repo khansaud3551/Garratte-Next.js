@@ -1,6 +1,7 @@
 import React from "react";
 import FAQ from "./FAQ";
 import VerticalSlider from "./VerticalSlider";
+import Link from "next/link";
 
 const AwarenessBanner = () => {
   return (
@@ -19,9 +20,11 @@ const AwarenessBanner = () => {
             world.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-5">
-            <button className="px-8 maven-font font-bold text-xl py-4 rounded-xl bg-primary">
-              Join ManageHer
-            </button>
+            <Link href="/training">
+              <button className="px-8 maven-font font-bold text-xl py-4 rounded-xl bg-primary">
+                Join ManageHer
+              </button>
+            </Link>
             <div className="flex ml-4">
               <img
                 className="w-[60px] h-[60px]  rounded-full object-cover border border-primary/80"
