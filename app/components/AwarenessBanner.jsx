@@ -10,17 +10,17 @@ const AwarenessBanner = () => {
           className="md:col-span-7 pt-12 max-w-[645px] space-y-10 md:ml-[-10px]"
           style={{ lineHeight: "initial" }}
         >
-          <h1 className="text-5xl md:text-[70px] font-bold ">
+          <h1 className="maven-font text-5xl md:text-[70px] font-bold ">
             Learn how to build your OnlyFans Agency!
           </h1>
-          <p className="text-[25px]">
+          <p className="text-[25px] maven-font">
             Enroll in Our Comprehensive OnlyFans Management Course which you
             will learn to create a 6 figure agency working from anywhere in the
             world.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-5">
-            <button className="px-8 font-bold text-xl py-4 rounded-xl bg-primary">
-              Join ManageHers
+            <button className="px-8 maven-font font-bold text-xl py-4 rounded-xl bg-primary">
+              Join ManageHer
             </button>
             <div className="flex ml-4">
               <img
@@ -46,7 +46,9 @@ const AwarenessBanner = () => {
                   <img src="assets/fullstar.svg" alt="" />
                   <img src="assets/halfstar.svg" alt="" />
                 </div>
-                <p>1,700 people like you have purchased this product!</p>
+                <p className="inter-font">
+                  1,700 people like you have purchased this product!
+                </p>
               </div>
             </div>
           </div>

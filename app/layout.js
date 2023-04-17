@@ -1,6 +1,12 @@
 import Header from "./components/Header";
 import "./globals.css";
+import { Inter } from "next/font/google";
 import { Maven_Pro } from "next/font/google";
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 const maven_Pro = Maven_Pro({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -15,8 +21,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${maven_Pro.className} `}>
-        <div className="header relative">
+      <body className={`${inter.className} `}>
+        <div className={`header relative`}>
           <Header />
         </div>
         <div className="container mx-auto">{children}</div>

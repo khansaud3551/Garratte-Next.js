@@ -24,6 +24,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Inter", sans-serif;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+.maven-font {
+  font-family: "__Maven_Pro_66aa57";
 }
 
 .header {
