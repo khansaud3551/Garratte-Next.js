@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
         <div className={`header relative`}>
           <Header />
         </div>
-        <div className="container mx-auto">{children}</div>
+        <div className="container mx-auto px-5">{children}</div>
         <img
           src="
       assets/footer.gif"
-          className="w-[650px] mx-auto"
+          className="w-[300px] md:w-[650px] mx-auto"
           alt=""
         />
         <p className="text-center text-xl mb-5">Copyright @ 2023</p>

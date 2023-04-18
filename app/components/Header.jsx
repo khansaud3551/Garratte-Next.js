@@ -32,14 +32,14 @@ const Header = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container px-5 mx-auto">
       <nav className="pt-8 pb-10">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
               <Image
                 src="/assets/logo.gif"
-                className="ml-[-27px]"
+                className="ml-[-27px] w-[150px] md:w-[200px]"
                 alt="Logo"
                 width={200}
                 height={200}
@@ -117,6 +117,7 @@ const Header = () => {
               <Link
                 href={link.path}
                 key={link.name}
+                onClick={toggleMenu}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md
                 text-2xl font-medium mb-4"
               >

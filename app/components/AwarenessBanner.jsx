@@ -8,7 +8,7 @@ const AwarenessBanner = () => {
     <div className="grid my-5 md:mt-[-20px]">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div
-          className="md:col-span-7 pt-12 max-w-[645px] space-y-10 md:ml-[-10px]"
+          className="md:col-span-7 pt-0 md:pt-12 max-w-[645px] space-y-10 md:ml-[-10px]"
           style={{ lineHeight: "initial" }}
         >
           <h1 className="maven-font text-5xl md:text-[70px] font-bold ">
@@ -25,19 +25,19 @@ const AwarenessBanner = () => {
                 Join ManageHer
               </button>
             </Link>
-            <div className="flex ml-4">
+            <div className="flex mt-3 md:mt-0 md:ml-4">
               <img
-                className="w-[60px] h-[60px]  rounded-full object-cover border border-primary/80"
+                className="w-[50px] h-[50px] md:w-[60px] md:h-[60px]  rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img1.png"
                 alt=""
               />
               <img
-                className="w-[60px] h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
+                className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img2.png"
                 alt=""
               />
               <img
-                className="w-[60px] h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
+                className="w-[50px] h-[50px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img3.png"
                 alt=""
               />
@@ -64,7 +64,7 @@ const AwarenessBanner = () => {
       </div>
 
       {/* awareness cards here */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 my-14 md:my-28">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-8 my-14 md:my-28">
         <AwarenessCard
           title="Expert Instruction"
           description="This course is taught by a 3 year experienced Onlyfans Manager which will provide tips, tricks and techniques. With bonus incentives to jumpstart your agency!"
