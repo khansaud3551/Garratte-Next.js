@@ -112,7 +112,7 @@ const Header = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } md:hidden fixed top-0 left-0 h-full w-full bg-gray-800 z-50 transition-all duration-300 ease-in-out`}
+          } md:hidden fixed top-0 left-0 h-full w-full bg-black z-50 transition-all duration-300 ease-in-out`}
         >
           <div className="flex flex-col items-center justify-center h-full">
             {NavLinks.map((link) => (

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <img
           src="
       assets/footer.gif"
-          className="w-[300px] md:w-[650px] mx-auto"
+          className="w-[300px] md:w-[580px] mx-auto"
           alt=""
         />
         <p className="text-center text-xl mb-5">Copyright @ 2023</p>

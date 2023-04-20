@@ -12,11 +12,19 @@ const reviews = [
   },
   {
     id: 2,
+    name: "Tyler K",
+    img: "assets/btn_img3.png",
+    review:
+      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all he tools and knowledge i needed to succeed!",
+  },
+  {
+    id: 2,
     name: "Jane Smith",
     img: "assets/btn_img2.png",
     review:
       "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all he tools and knowledge i needed to succeed!",
   },
+
   {
     id: 3,
     name: "Mike Johnson",

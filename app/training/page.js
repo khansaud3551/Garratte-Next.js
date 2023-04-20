@@ -57,6 +57,15 @@ const page = () => {
       >
         Learn More
       </button>
+
+      <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
+
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-8 my-14 md:my-28">
+        <ClientReview img="assets/client_1.png" />
+        <ClientReview img="assets/client_2.png" />
+        <ClientReview img="assets/client_3.png" />
+      </div>
+
       <AnimatedModal
         isOpen={isModalOpen}
         onRequestClose={handleModalClose}
@@ -164,5 +173,33 @@ const AnimatedModal = ({
       </button>
       <animated.div style={animation}>{children}</animated.div>
     </Modal>
+  );
+};
+
+const ClientReview = ({ img }) => {
+  return (
+    <>
+      <div className="col-span-12 md:col-span-6 lg:col-span-4">
+        <div className="p-8 space-y-3">
+          <div className="flex gap-2 mb-2">
+            <img src="assets/icon-star.svg" alt="" />
+            <img src="assets/icon-star.svg" alt="" />
+            <img src="assets/icon-star.svg" alt="" />
+            <img src="assets/icon-star.svg" alt="" />
+            <img src="assets/icon-star.svg" alt="" />
+          </div>
+          <p>
+            I had no idea how to manage Only Fans until i took the Manage Her
+            course. It gave me all he tools and knowledge i needed to succeed!
+          </p>
+          <img
+            className="bg-[#A5B4FC] my-2 object-cover rounded-full w-[100px] h-[100px]"
+            src={img}
+            alt=""
+          />
+          <h5>Sarah G</h5>
+        </div>
+      </div>
+    </>
   );
 };
