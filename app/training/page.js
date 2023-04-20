@@ -154,7 +154,7 @@ const AnimatedModal = ({
     >
       <button
         onClick={handleModalClose}
-        className="absolute bg-primary p-1 rounded-full top-0 right-0 mt-4 mr-4 md:mt-8 md:mr-8"
+        className="absolute bg-primary z-10 p-1 rounded-full top-0 right-0 mt-4 mr-4 md:mt-8 md:mr-8"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
