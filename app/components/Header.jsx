@@ -60,9 +60,11 @@ const Header = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <button className="rounded-2xl text-white font-semibold text-2xl px-14 py-3 bg-[#424242]">
-              Join Now
-            </button>
+            <Link href="/training">
+              <button className="rounded-2xl text-white font-semibold text-2xl px-14 py-3 bg-[#424242]">
+                Join Now
+              </button>
+            </Link>
           </div>
 
           <div className="-mr-2 flex md:hidden">

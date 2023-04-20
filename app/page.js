@@ -8,9 +8,26 @@ export default function Home() {
   return (
     <main>
       <AwarenessBanner />
+
+      <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
+
       <Consideration />
+
+      <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
+
       <Decision />
+
+      <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
+
       <div className="bg-black w-full lg:w-[730px] mx-auto my-14 md:my-28">
+        <div className="text-center">
+          <h1 className="text-3xl font-semibold mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-lg mb-3">
+            Get answers to common questions about this course.
+          </p>
+        </div>
         <FAQ title="Is this course suitable for beginners?">
           <p>
             Yes, our course is suitable for all levels. We have lessons ranging
@@ -19,13 +36,13 @@ export default function Home() {
             your needs.
           </p>
         </FAQ>
-        <FAQ title="How long does the course take to complete?">
+        <FAQ title="How long does the course take to complete ?">
           <p>Content for section 2</p>
         </FAQ>
-        <FAQ title="Section 3">
+        <FAQ title="Will I have access to the course materials after I complete the course ?">
           <p>Content for section 3</p>
         </FAQ>
-        <FAQ title="How long does the course take to complete?">
+        <FAQ title="Can I ask questions and get support from the instructors ?">
           <p>Content for section 2</p>
         </FAQ>
       </div>

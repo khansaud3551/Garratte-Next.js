@@ -39,11 +39,18 @@ const page = () => {
         and tools you need to succeed in this business model from the comfort of
         your own home. Start building your dream career today through Manageher.
       </p>
-      <img
+      {/* <img
         className="h-[250px] md:h-[500px] w-full object-cover rounded-xl"
         src="assets/video.jpg"
         alt=""
+      /> */}
+
+      <iframe
+        src="https://drive.google.com/file/d/1wO7yj07BXgkRv6HPO6XNQ4xUD0i2bee1/preview"
+        className="w-full h-[300px] md:h-[700px]"
+        allow="autoplay"
       />
+
       <button
         onClick={() => setIsModalOpen(true)}
         className="px-8 flex mx-auto justify-center font-bold text-xl py-4 w-[80%] md:w-[500px] rounded-xl bg-primary"
