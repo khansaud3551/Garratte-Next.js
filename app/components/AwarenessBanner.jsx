@@ -37,7 +37,7 @@ const AwarenessBanner = () => {
                 alt=""
               />
               <img
-                className="w-[50px] h-[50px] ml-[-15px] rounded-full object-cover border border-primary/80"
+                className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img3.png"
                 alt=""
               />
