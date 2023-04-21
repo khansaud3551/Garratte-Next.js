@@ -47,7 +47,7 @@ const page = () => {
 
       <iframe
         src="https://drive.google.com/file/d/1wO7yj07BXgkRv6HPO6XNQ4xUD0i2bee1/preview"
-        className="w-full h-[300px] md:h-[700px]"
+        className="w-full h-[300px] md:h-[700px] rounded-2xl"
         allow="autoplay"
       />
 

@@ -20,7 +20,7 @@ const FAQ = ({ title, children }) => {
         {title}
         <FontAwesomeIcon
           icon={isOpen ? faMinus : faPlus}
-          className="accordion-icon"
+          className="accordion-icon ml-3"
         />
       </div>
       {isOpen && <div className="accordion-content">{children}</div>}

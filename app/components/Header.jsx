@@ -11,8 +11,8 @@ const NavLinks = [
     path: "/ourstory",
   },
   {
-    name: "Pillars",
-    path: "/pillars",
+    name: "YouTube",
+    path: "https://www.youtube.com/channel/UCnTYT3xg7C1iUmTGRufmi4g",
   },
   {
     name: "Free Training",
@@ -52,6 +52,7 @@ const Header = () => {
                 <Link
                   href={link.path}
                   key={link.name}
+                  target={link.name === "YouTube" ? "_blank" : "_self"}
                   className="text-secondary-light hover:text-white px-3 py-2 rounded-md  "
                 >
                   {link.name}
