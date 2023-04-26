@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 const Decision = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 my-14 md:my-28">
-      <div className="md:col-span-8 md:pr-14 py-3 space-y-3 md:self-center">
-        <h1 className="text-2xl text-primary font-semibold">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-12 my-14 md:my-28">
+      <div className="py-3 space-y-3 md:col-span-8 md:pr-14 md:self-center">
+        <h1 className="text-2xl font-semibold text-primary">
           Become a Manager
         </h1>
         <h1 className="text-3xl font-semibold">
@@ -22,7 +23,7 @@ const Decision = () => {
       </div>
       <div className="md:col-span-4 ">
         <div className="card_shadow mx-auto md:ml-auto rounded-xl max-w-[380px] space-y-6 border-primary border-t-[3px]">
-          <div className="mx-auto flex flex-col items-center space-y-10 pt-10">
+          <div className="flex flex-col items-center pt-10 mx-auto space-y-10">
             <h1 className="text-3xl font-medium">ONE PAYMENT ONLY!</h1>
 
             <div className="space-y-3 text-xl">
@@ -49,14 +50,16 @@ const Decision = () => {
             </div>
 
             <div className="space-y-1 ">
-              <h3 className="line-through text-primary text-base">$1500</h3>
+              <h3 className="text-base line-through text-primary">$1500</h3>
               <h1 className="text-5xl font-bold">$999</h1>
             </div>
           </div>
           <div className="px-2">
-            <button className="bg-primary p-10 w-full text-white rounded-xl rounded-t-none font-semibold text-lg">
-              Enroll now
-            </button>
+            <Link href="https://sso.teachable.com/secure/1564605/checkout/4691443/manageher">
+              <button className="w-full p-10 text-lg font-semibold text-white rounded-t-none bg-primary rounded-xl">
+                Enroll now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const NavLinks = [
   { name: "Home", path: "/" },
-  {
-    name: "Our Story",
-    path: "/ourstory",
-  },
+  // {
+  //   name: "Our Story",
+  //   path: "/ourstory",
+  // },
   {
     name: "YouTube",
     path: "https://www.youtube.com/channel/UCnTYT3xg7C1iUmTGRufmi4g",
@@ -47,13 +47,13 @@ const Header = () => {
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="flex items-baseline ml-10 space-x-4">
               {NavLinks.map((link) => (
                 <Link
                   href={link.path}
                   key={link.name}
                   target={link.name === "YouTube" ? "_blank" : "_self"}
-                  className="text-secondary-light hover:text-white px-3 py-2 rounded-md  "
+                  className="px-3 py-2 rounded-md text-secondary-light hover:text-white "
                 >
                   {link.name}
                 </Link>
@@ -68,11 +68,11 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="-mr-2 flex md:hidden">
+          <div className="flex -mr-2 md:hidden">
             <button
               onClick={toggleMenu}
               type="button"
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-800 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -121,8 +121,7 @@ const Header = () => {
                 href={link.path}
                 key={link.name}
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md
-                text-2xl font-medium mb-4"
+                className="px-3 py-2 mb-4 text-2xl font-medium text-gray-300 rounded-md hover:text-white"
               >
                 {link.name}
               </Link>
@@ -135,7 +134,7 @@ const Header = () => {
             >
               <span className="sr-only">Close main menu</span>
               <svg
-                className="h-8 w-8"
+                className="w-8 h-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

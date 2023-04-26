@@ -2,8 +2,8 @@ import React from "react";
 
 const Consideration = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 my-14 md:my-28">
-      <div className="md:col-span-7 text-lg space-y-4 md:pr-14 py-3">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-12 my-14 md:my-28">
+      <div className="py-3 space-y-4 text-lg md:col-span-7 md:pr-14">
         <h1 className="text-3xl font-semibold">Who is this course for?</h1>
         <p className="text-lg">
           Our comprehensive course covers a wide range of topics, from beginner
@@ -14,21 +14,21 @@ const Consideration = () => {
           a while and want to take your agency to the next level, this course is
           perfect for you!.
         </p>
-        <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-3">
           <img src="/assets/tick.svg" alt="" />
           <p>
             Newcomers looking to learn one of the fastest growing and profitable
             business models out now.
           </p>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-3">
           <img src="/assets/tick.svg" alt="" />
           <p>
             Managers that need the extra push and knowledge to take their agency
             to the next level.
           </p>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-3">
           <img src="/assets/tick.svg" alt="" />
           <p>
             Managers that are experienced but still feel like they are missing
@@ -36,11 +36,10 @@ const Consideration = () => {
           </p>
         </div>
       </div>
-      <div className="md:col-span-5 ">
+      <div className="h-full md:col-span-5">
         <img
-          className="rounded-xl h-full object-cover"
-          src="assets/img_content.jpg
-    "
+          className="object-contain h-full rounded-xl"
+          src="assets/consideration.jpeg"
           alt=""
         />
       </div>
