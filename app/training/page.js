@@ -4,6 +4,21 @@ import Modal from "react-modal";
 import { useSpring, animated } from "react-spring";
 import Image from "next/image";
 
+const reviews = [
+  {
+    name: "Sara G",
+    review: "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all the tools and knowledge i needed to succeed!",
+  },
+  {
+    name: "Todd",
+    review: "I had the pleasure of completing the ManageHer program and am thrilled with the results. Through the program, I gained practical skills and strategies that have helped me become a more effective manager and leader. I highly recommend this program to anyone looking to improve their management skills and achieve greater success in their career."
+  },
+  {
+    name: "Ethan",
+    review: "After finishing the ManageHer program, my business generated 10k+ months. The program taught me how to manage my team and my models better. To anyone who wants to improve their onlyfans management skills I would 100% buy this course."
+  }
+]
+
 const page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -61,9 +76,12 @@ const page = () => {
       <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-8 my-14 md:my-28">
-        <ClientReview img="assets/client_1.png" />
+        {/* <ClientReview img="assets/client_1.png" />
         <ClientReview img="assets/client_2.png" />
-        <ClientReview img="assets/client_3.png" />
+        <ClientReview img="assets/client_3.png" /> */}
+        {reviews.map((client_review, index) => (
+          <ClientReview img={`assets/client_${index + 1}.png`} name={client_review.name} review={client_review.review} />
+        ))}
       </div>
 
       <AnimatedModal
@@ -176,11 +194,11 @@ const AnimatedModal = ({
   );
 };
 
-const ClientReview = ({ img }) => {
+const ClientReview = ({ img, review, name }) => {
   return (
     <>
       <div className="col-span-12 md:col-span-6 lg:col-span-4">
-        <div className="px-8 py-2 md:p-8 space-y-3">
+        <div className="flex flex-col h-full px-8 py-2 md:p-8 space-y-3">
           <div className="flex gap-2 mb-2">
             <img src="assets/icon-star.svg" alt="" />
             <img src="assets/icon-star.svg" alt="" />
@@ -188,18 +206,20 @@ const ClientReview = ({ img }) => {
             <img src="assets/icon-star.svg" alt="" />
             <img src="assets/icon-star.svg" alt="" />
           </div>
-          <p>
-            I had no idea how to manage Only Fans until i took the Manage Her
-            course. It gave me all he tools and knowledge i needed to succeed!
+          <p className="flex-grow">
+            {review}
           </p>
-          <img
-            className="bg-[#A5B4FC] my-2 object-cover rounded-full w-[100px] h-[100px]"
-            src={img}
-            alt=""
-          />
-          <h5>Sarah G</h5>
+          <div className="flex flex-col items-center">
+            <img
+              className="bg-[#A5B4FC] my-2 object-cover rounded-full w-[100px] h-[100px]"
+              src={img}
+              alt=""
+            />
+            <h5>{name}</h5>
+          </div>
         </div>
       </div>
     </>
   );
 };
+

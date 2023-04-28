@@ -50,7 +50,7 @@ const AwarenessBanner = () => {
                   <img src="assets/halfstar.svg" alt="" />
                 </div>
                 <p className="inter-font">
-                  1,700 people like you have purchased this product!
+                  87 people like you have purchased this product!
                 </p>
               </div>
             </div>
