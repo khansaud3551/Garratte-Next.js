@@ -7,20 +7,25 @@ import Image from "next/image";
 const reviews = [
   {
     name: "Sara G",
-    review: "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all the tools and knowledge i needed to succeed!",
+    review:
+      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all the tools and knowledge i needed to succeed!",
   },
   {
     name: "Todd",
-    review: "I had the pleasure of completing the ManageHer program and am thrilled with the results. Through the program, I gained practical skills and strategies that have helped me become a more effective manager and leader. I highly recommend this program to anyone looking to improve their management skills and achieve greater success in their career."
+    review:
+      "I had the pleasure of completing the ManageHer program and am thrilled with the results. Through the program, I gained practical skills and strategies that have helped me become a more effective manager and leader. I highly recommend this program to anyone looking to improve their management skills and achieve greater success in their career.",
   },
   {
     name: "Ethan",
-    review: "After finishing the ManageHer program, my business generated 10k+ months. The program taught me how to manage my team and my models better. To anyone who wants to improve their onlyfans management skills I would 100% buy this course."
-  }
-]
+    review:
+      "After finishing the  ManageHer program, my business generated 10k+ months. The program taught me how to manage my team and my models better. To anyone who wants to improve their onlyfans management skills I would 100% buy this course.",
+  },
+];
 
 const page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,8 +41,29 @@ const page = () => {
     setIsModalOpen(false);
   };
 
-  const handleModalSubmit = (formData) => {
-    console.log("Form data:", formData);
+  const handleModalSubmit = async () => {
+    const res = await fetch("/api/formhandle", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.error) {
+      console.error(data.message);
+      setError(data.message);
+      setMessage("");
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+    } else {
+      console.log(data.message);
+      setMessage(data.message);
+      setError("");
+    }
   };
 
   return (
@@ -80,7 +106,11 @@ const page = () => {
         <ClientReview img="assets/client_2.png" />
         <ClientReview img="assets/client_3.png" /> */}
         {reviews.map((client_review, index) => (
-          <ClientReview img={`assets/client_${index + 1}.png`} name={client_review.name} review={client_review.review} />
+          <ClientReview
+            img={`assets/client_${index + 1}.png`}
+            name={client_review.name}
+            review={client_review.review}
+          />
         ))}
       </div>
 
@@ -105,6 +135,7 @@ const page = () => {
         </p>
         <div className="w-full md:w-[70%] mx-auto space-y-5 mt-4 md:mt-12">
           <input
+            required
             className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
             type="text"
             name="name"
@@ -129,13 +160,24 @@ const page = () => {
             onChange={handleChange}
           />
         </div>
+
+        {message && (
+          <p className="text-center text-2xl text-green-400 font-bold mt-8">
+            {message}
+          </p>
+        )}
+        {error && (
+          <p className="text-center text-2xl text-red-500 font-bold mt-8">
+            {error}
+          </p>
+        )}
         <button
-          onClick={() => setIsModalOpen(true)}
-          className="px-8 mt-4 md:mt-12 flex mx-auto justify-center font-bold md:text-xl py-4 w-[80%] md:w-[350px] rounded-xl bg-primary"
+          onClick={() => handleModalSubmit()}
+          disabled={message}
+          className="px-8 disabled:bg-secondary-light mt-4 md:mt-12 flex mx-auto justify-center font-bold md:text-xl py-4 w-[80%] md:w-[350px] rounded-xl bg-primary"
         >
           Learn More
         </button>
-
         <p className="text-lg modal_text text-center mt-4 md:mt-8">
           Your information is 100% save with us and will never be shared with
           anyone
@@ -206,9 +248,7 @@ const ClientReview = ({ img, review, name }) => {
             <img src="assets/icon-star.svg" alt="" />
             <img src="assets/icon-star.svg" alt="" />
           </div>
-          <p className="flex-grow">
-            {review}
-          </p>
+          <p className="flex-grow">{review}</p>
           <div className="flex flex-col items-center">
             <img
               className="bg-[#A5B4FC] my-2 object-cover rounded-full w-[100px] h-[100px]"
@@ -222,4 +262,3 @@ const ClientReview = ({ img, review, name }) => {
     </>
   );
 };
-
