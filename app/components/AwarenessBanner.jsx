@@ -27,17 +27,17 @@ const AwarenessBanner = () => {
             </Link>
             <div className="flex mt-3 md:mt-0 md:ml-4">
               <img
-                className="w-[50px] h-[50px] md:w-[60px] md:h-[60px]  rounded-full object-cover border border-primary/80"
+                className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img1.png"
                 alt=""
               />
               <img
-                className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
+                className="w-[50px] min-w-[50px] min-h-[50px] h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img2.png"
                 alt=""
               />
               <img
-                className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
+                className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] md:w-[60px] md:h-[60px] ml-[-15px] rounded-full object-cover border border-primary/80"
                 src="/assets/btn_img3.png"
                 alt=""
               />

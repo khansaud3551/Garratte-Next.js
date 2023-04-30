@@ -38,7 +38,7 @@ const Consideration = () => {
       </div>
       <div className="h-full md:col-span-5">
         <img
-          className="object-contain h-full rounded-xl"
+          className="object-cover mx-auto w-full rounded-xl h-[400px] md:h-[500px]"
           src="assets/consideration.jpeg"
           alt=""
         />

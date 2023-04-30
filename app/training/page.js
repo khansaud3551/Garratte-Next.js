@@ -41,7 +41,8 @@ const page = () => {
     setIsModalOpen(false);
   };
 
-  const handleModalSubmit = async () => {
+  const handleModalSubmit = async (e) => {
+    e.preventDefault();
     const res = await fetch("/api/formhandle", {
       method: "POST",
       headers: {
@@ -133,7 +134,10 @@ const page = () => {
           the comfort of your own home. Start building your dream career today
           through Manageher.
         </p>
-        <div className="w-full md:w-[70%] mx-auto space-y-5 mt-4 md:mt-12">
+        <form
+          onSubmit={handleModalSubmit}
+          className="w-full md:w-[70%] mx-auto space-y-5 mt-4 md:mt-12"
+        >
           <input
             required
             className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
@@ -144,8 +148,9 @@ const page = () => {
             onChange={handleChange}
           />
           <input
+            required
             className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
-            type="text"
+            type="email"
             name="email"
             placeholder="Your Email Address Here..."
             value={formData.email}
@@ -153,35 +158,38 @@ const page = () => {
           />
           <input
             className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
-            type="text"
+            type="number"
+            required
             name="phoneNumber"
             placeholder="Your Phone Number Here..."
             value={formData.phoneNumber}
             onChange={handleChange}
           />
-        </div>
 
-        {message && (
-          <p className="text-center text-2xl text-green-400 font-bold mt-8">
-            {message}
+          {message && (
+            <p className="text-center text-2xl text-green-400 font-bold mt-8">
+              {message}
+            </p>
+          )}
+          {error && (
+            <p className="text-center text-2xl text-red-500 font-bold mt-8">
+              {error}
+            </p>
+          )}
+          <div>
+            <button
+              type="submit"
+              disabled={message}
+              className="px-8 disabled:bg-secondary-light mt-4 md:mt-11 flex mx-auto justify-center font-bold md:text-xl py-4 w-[80%] md:w-[350px] rounded-xl bg-primary"
+            >
+              Learn More
+            </button>
+          </div>
+          <p className="text-lg modal_text text-center mt-4 md:mt-8">
+            Your information is 100% save with us and will never be shared with
+            anyone
           </p>
-        )}
-        {error && (
-          <p className="text-center text-2xl text-red-500 font-bold mt-8">
-            {error}
-          </p>
-        )}
-        <button
-          onClick={() => handleModalSubmit()}
-          disabled={message}
-          className="px-8 disabled:bg-secondary-light mt-4 md:mt-12 flex mx-auto justify-center font-bold md:text-xl py-4 w-[80%] md:w-[350px] rounded-xl bg-primary"
-        >
-          Learn More
-        </button>
-        <p className="text-lg modal_text text-center mt-4 md:mt-8">
-          Your information is 100% save with us and will never be shared with
-          anyone
-        </p>
+        </form>
       </AnimatedModal>
     </div>
   );

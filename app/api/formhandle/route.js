@@ -11,13 +11,7 @@ export async function POST(req, res) {
   const { name, email, phoneNumber } = body;
 
   // Validate the form data
-  if (
-    !name ||
-    name.length < 3 ||
-    !email ||
-    !isValidEmail(email) ||
-    !phoneNumber
-  ) {
+  if (!name || !email || !isValidEmail(email) || !phoneNumber) {
     return NextResponse.json({
       error: true,
       message: "Invalid form data.",
