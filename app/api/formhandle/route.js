@@ -3,10 +3,7 @@ import { connectToDatabase } from "../../lib/mongodb";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/lib/emailValidator";
 
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-sgMail.setApiKey(
-  "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"
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req, res) {
   //get the form data name, email, message
@@ -48,7 +45,7 @@ export async function POST(req, res) {
     templateId: "d-886d0b0e96e94b64b6dea64acd28d6aa", // Your SendGrid template ID
     dynamic_template_data: {
       name: name,
-      link: "https://your-link.com",
+      website: "test",
     },
   };
   console.log(msg);
