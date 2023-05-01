@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const reviews = [
   {
-    name: "Sara G",
+    name: "Brian",
     review:
-      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all the tools and knowledge i needed to succeed!",
+      "I recently took ManageHer and I can honestly say it was a game changer. Before the course, I was struggling to grow my audience and increase my earnings on the platform. But after implementing the strategies and tips I learned from the course, I saw a significant increase in my models subscribers and income.",
   },
   {
     name: "Todd",
@@ -68,10 +68,10 @@ const page = () => {
   };
 
   return (
-    <div className="my-10 justify-center space-y-16">
+    <div className="justify-center my-10 space-y-16">
       <button
         onClick={() => setIsModalOpen(true)}
-        className="px-12 mx-auto flex font-bold text-xl py-4 rounded-xl bg-primary"
+        className="flex px-12 py-4 mx-auto text-xl font-bold rounded-xl bg-primary"
       >
         Free Training
       </button>
@@ -140,7 +140,7 @@ const page = () => {
         >
           <input
             required
-            className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
+            className="w-full p-3 text-black bg-white md:p-6 md:text-xl focus:outline-none rounded-xl"
             type="text"
             name="name"
             placeholder="Your Full Name Here..."
@@ -149,7 +149,7 @@ const page = () => {
           />
           <input
             required
-            className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
+            className="w-full p-3 text-black bg-white md:p-6 md:text-xl focus:outline-none rounded-xl"
             type="email"
             name="email"
             placeholder="Your Email Address Here..."
@@ -157,7 +157,7 @@ const page = () => {
             onChange={handleChange}
           />
           <input
-            className="p-3 md:p-6 md:text-xl focus:outline-none w-full bg-white text-black rounded-xl"
+            className="w-full p-3 text-black bg-white md:p-6 md:text-xl focus:outline-none rounded-xl"
             type="number"
             required
             name="phoneNumber"
@@ -167,12 +167,12 @@ const page = () => {
           />
 
           {message && (
-            <p className="text-center text-2xl text-green-400 font-bold mt-8">
+            <p className="mt-8 text-2xl font-bold text-center text-green-400">
               {message}
             </p>
           )}
           {error && (
-            <p className="text-center text-2xl text-red-500 font-bold mt-8">
+            <p className="mt-8 text-2xl font-bold text-center text-red-500">
               {error}
             </p>
           )}
@@ -185,7 +185,7 @@ const page = () => {
               Learn More
             </button>
           </div>
-          <p className="text-lg modal_text text-center mt-4 md:mt-8">
+          <p className="mt-4 text-lg text-center modal_text md:mt-8">
             Your information is 100% save with us and will never be shared with
             anyone
           </p>
@@ -222,11 +222,11 @@ const AnimatedModal = ({
     >
       <button
         onClick={handleModalClose}
-        className="absolute bg-primary z-10 p-1 rounded-full top-0 right-0 mt-4 mr-4 md:mt-8 md:mr-8"
+        className="absolute top-0 right-0 z-10 p-1 mt-4 mr-4 rounded-full bg-primary md:mt-8 md:mr-8"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-white"
+          className="w-6 h-6 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -248,7 +248,7 @@ const ClientReview = ({ img, review, name }) => {
   return (
     <>
       <div className="col-span-12 md:col-span-6 lg:col-span-4">
-        <div className="flex flex-col h-full px-8 py-2 md:p-8 space-y-3">
+        <div className="flex flex-col h-full px-8 py-2 space-y-3 md:p-8">
           <div className="flex gap-2 mb-2">
             <img src="assets/icon-star.svg" alt="" />
             <img src="assets/icon-star.svg" alt="" />
