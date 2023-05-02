@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useSpring, animated } from "react-spring";
 import Image from "next/image";
@@ -22,10 +22,20 @@ const reviews = [
   },
 ];
 
+const punchlineText = 
+`
+Escape the 9-5 grind: Master OnlyFans model management and generate
+$10k-$30k/month in just 60 days. Acquire the skills and resources 
+necessary to excel in this lucrative business from the comfort of your home. 
+Embark on the journey to your dream career with ManageHer, starting today.
+`;
+
 const page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
+  const [dots, setDots] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,8 +51,19 @@ const page = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    if (sending) {
+      const timer = setInterval(() => {
+        setDots((prevDots) => (prevDots.length < 3 ? prevDots + "." : ""));
+      }, 300);
+      return () => clearInterval(timer);
+    }
+  }, [sending]);
+
   const handleModalSubmit = async (e) => {
     e.preventDefault();
+    setSending(true);
+
     const res = await fetch("/api/formhandle", {
       method: "POST",
       headers: {
@@ -52,6 +73,7 @@ const page = () => {
     });
 
     const data = await res.json();
+    setSending(false);
 
     if (data.error) {
       console.error(data.message);
@@ -76,10 +98,11 @@ const page = () => {
         Free Training
       </button>
       <p className="text-center maven-font text-[30px] max-w-5xl mx-auto">
-        How to leave your 9-5 gig, learn to manage models, and earn
+        {/* How to leave your 9-5 gig, learn to manage models, and earn
         $10k-$30k/month within 60 days as a onlyfans manager. Gain the knowledge
         and tools you need to succeed in this business model from the comfort of
-        your own home. Start building your dream career today through Manageher.
+        your own home. Start building your dream career today through Manageher. */}
+        {punchlineText}
       </p>
       {/* <img
         className="h-[250px] md:h-[500px] w-full object-cover rounded-xl"
@@ -128,11 +151,12 @@ const page = () => {
           height={200}
         />
         <p className="text-center maven-font  md:text-[25px] max-w-5xl mx-auto">
-          How to leave your 9-5 gig, learn to manage models, and earn
+          {/* How to leave your 9-5 gig, learn to manage models, and earn
           $10k-$30k/month within 60 days as a onlyfans manager. Gain the
           knowledge and tools you need to succeed in this business model from
           the comfort of your own home. Start building your dream career today
-          through Manageher.
+          through Manageher. */}
+          {punchlineText}
         </p>
         <form
           onSubmit={handleModalSubmit}
@@ -156,7 +180,7 @@ const page = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          <input
+          {/* <input
             className="w-full p-3 text-black bg-white md:p-6 md:text-xl focus:outline-none rounded-xl"
             type="number"
             required
@@ -164,8 +188,12 @@ const page = () => {
             placeholder="Your Phone Number Here..."
             value={formData.phoneNumber}
             onChange={handleChange}
-          />
-
+          /> */}
+          {sending && (
+            <p className="mt-8 text-2xl font-bold text-center text-blue-500">
+              Sending you an email{dots}
+            </p>
+          )}
           {message && (
             <p className="mt-8 text-2xl font-bold text-center text-green-400">
               {message}
@@ -186,8 +214,7 @@ const page = () => {
             </button>
           </div>
           <p className="mt-4 text-lg text-center modal_text md:mt-8">
-            Your information is 100% save with us and will never be shared with
-            anyone
+            Your information is 100% secure with us and will never be shared with anyone
           </p>
         </form>
       </AnimatedModal>

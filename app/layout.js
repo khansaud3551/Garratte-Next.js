@@ -25,14 +25,15 @@ export default function RootLayout({ children }) {
         <div className={`header relative`}>
           <Header />
         </div>
-        <div className="container mx-auto px-5">{children}</div>
+        <div className="container px-5 mx-auto">{children}</div>
         <img
           src="
       assets/footer.gif"
           className="w-[300px] md:w-[580px] mx-auto"
           alt=""
         />
-        <p className="text-center text-xl mb-5">Copyright @ 2023</p>
+        {/* <p className="mb-5 text-xl text-center">Copyright @ 2023</p> */}
+        <p className="mb-5 text-xl text-center">© {new Date().getFullYear()} ManageHer</p>
       </body>
     </html>
   );

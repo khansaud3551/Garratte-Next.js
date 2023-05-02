@@ -3,15 +3,17 @@ import { connectToDatabase } from "../../lib/mongodb";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/lib/emailValidator";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const API_KEY = process.env.SENDGRID_API_KEY;
+// console.log(API_KEY);
+sgMail.setApiKey(API_KEY);
 
 export async function POST(req, res) {
   //get the form data name, email, message
   const body = await req.json();
-  const { name, email, phoneNumber } = body;
+  const { name, email } = body;
 
   // Validate the form data
-  if (!name || !email || !isValidEmail(email) || !phoneNumber) {
+  if (!name || !email || !isValidEmail(email)) {
     return NextResponse.json({
       error: true,
       message: "Invalid form data.",
@@ -22,11 +24,7 @@ export async function POST(req, res) {
   const { db } = await connectToDatabase();
   const formData = {
     name,
-
     email,
-
-    phoneNumber,
-
     submittedAt: new Date(),
   };
 
@@ -39,11 +37,11 @@ export async function POST(req, res) {
     from: "tyler@manageher.io",
     // templateId: "d-886d0b0e96e94b64b6dea64acd28d6aa", // Your SendGrid template ID
     templateId: "d-41f5092e7c2f454d841924091f168799", // Your SendGrid template ID
-    dynamic_template_data: {
-      name: name,
-      website: "test",
-    },
-    subject: "ManageHer.io - Contact Form Submission",
+    // dynamic_template_data: {
+    //   name: name,
+    //   website: "test",
+    // },
+    subject: "Unlock the Secrets to Managing OnlyFans Models and Skyrocket Your Business",
   };
   console.log(msg);
 
