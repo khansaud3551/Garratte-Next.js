@@ -22,8 +22,7 @@ const reviews = [
   },
 ];
 
-const punchlineText = 
-`
+const punchlineText = `
 Escape the 9-5 grind: Master OnlyFans model management and generate
 $10k-$30k/month in just 60 days. Acquire the skills and resources 
 necessary to excel in this lucrative business from the comfort of your home. 
@@ -145,10 +144,10 @@ const page = () => {
       >
         <Image
           src="/assets/logo.gif"
-          className="mx-auto mt-[-44px] w-[100px] md:w-[200px]"
+          className="mx-auto mt-[-44px] w-[100px] md:w-[180px]"
           alt="Logo"
-          width={200}
-          height={200}
+          width={180}
+          height={180}
         />
         <p className="text-center maven-font  md:text-[25px] max-w-5xl mx-auto">
           {/* How to leave your 9-5 gig, learn to manage models, and earn
@@ -160,7 +159,7 @@ const page = () => {
         </p>
         <form
           onSubmit={handleModalSubmit}
-          className="w-full md:w-[70%] mx-auto space-y-5 mt-4 md:mt-12"
+          className="w-full md:w-[70%] mx-auto space-y-5 mt-4 md:mt-6"
         >
           <input
             required
@@ -214,7 +213,8 @@ const page = () => {
             </button>
           </div>
           <p className="mt-4 text-lg text-center modal_text md:mt-8">
-            Your information is 100% secure with us and will never be shared with anyone
+            Your information is 100% secure with us and will never be shared
+            with anyone
           </p>
         </form>
       </AnimatedModal>
@@ -241,7 +241,7 @@ const AnimatedModal = ({
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       overlayClassName="fixed overflow-scroll pt-36 md:pt-0 pb-6 mt:pb-0 md:my-0 inset-0 flex items-center justify-center bg-black bg-opacity-50"
-      className="bg-[#09001A] relative  border-primary border-[5px] md:px-20 py-10 w-[97%] md:w-[70%] p-6 rounded shadow-md outline-none"
+      className="bg-[#09001A] relative h-[90vh]  border-primary border-[5px] md:px-20 py-10 w-[97%] md:w-[80%] p-6 rounded shadow-md outline-none"
       ariaHideApp={false}
       appElement={
         typeof document !== "undefined" && document.getElementById("__next")
