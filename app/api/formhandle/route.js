@@ -43,6 +43,7 @@ export async function POST(req, res) {
       name: name,
       website: "test",
     },
+    subject: "ManageHer.io - Contact Form Submission",
   };
   console.log(msg);
 
