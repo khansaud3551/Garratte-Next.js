@@ -35,8 +35,10 @@ export async function POST(req, res) {
   // Send the customized email to the user
   const msg = {
     to: email,
-    from: "k.klassic44@gmail.com", // Update this with the verified email address or an email from the verified domain
-    templateId: "d-886d0b0e96e94b64b6dea64acd28d6aa", // Your SendGrid template ID
+    // from: "k.klassic44@gmail.com", // Update this with the verified email address or an email from the verified domain
+    from: "tyler@manageher.io",
+    // templateId: "d-886d0b0e96e94b64b6dea64acd28d6aa", // Your SendGrid template ID
+    templateId: "d-41f5092e7c2f454d841924091f168799", // Your SendGrid template ID
     dynamic_template_data: {
       name: name,
       website: "test",
