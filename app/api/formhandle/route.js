@@ -41,7 +41,8 @@ export async function POST(req, res) {
     //   name: name,
     //   website: "test",
     // },
-    subject: "Unlock the Secrets to Managing OnlyFans Models and Skyrocket Your Business",
+    subject:
+      "Unlock the Secrets to Managing OnlyFans Models and Skyrocket Your Business",
   };
   console.log(msg);
 
@@ -68,7 +69,7 @@ export async function POST(req, res) {
   // message submitted successfully using res
   return NextResponse.json(
     {
-      message: "Mssssessage sent successfully!",
+      message: "Message sent successfully!",
     },
     {
       status: 200,
