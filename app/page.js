@@ -21,10 +21,10 @@ export default function Home() {
 
       <div className="bg-black w-full lg:w-[730px] mx-auto my-14 md:my-28">
         <div className="text-center">
-          <h1 className="text-3xl font-semibold mb-4">
+          <h1 className="mb-4 text-3xl font-semibold">
             Frequently Asked Questions
           </h1>
-          <p className="text-lg mb-3">
+          <p className="mb-3 text-lg">
             Get answers to common questions about this course.
           </p>
         </div>
@@ -37,15 +37,22 @@ export default function Home() {
           </p>
         </FAQ>
         <FAQ title="How long does the course take to complete ?">
-          <p>Content for section 2</p>
+          <p>
+            The course duration depends on the individual learner's pace, but most students complete it within 6-8 weeks. This allows you to absorb the information and apply your newfound skills effectively.
+          </p>
         </FAQ>
         <FAQ title="Will I have access to the course materials after I complete the course ?">
-          <p>Content for section 3</p>
+          <p>
+            Absolutely! Once you complete the course, you'll continue to have lifetime access to all the course materials, enabling you to revisit the content and reinforce your learning whenever you need to.
+          </p>
         </FAQ>
         <FAQ title="Can I ask questions and get support from the instructors ?">
-          <p>Content for section 2</p>
+          <p>
+            Yes, you certainly can! Our instructors are dedicated to helping you succeed, so feel free to reach out to them with any questions or concerns you may have. They'll be more than happy to assist you and provide the support you need throughout your learning journey.
+          </p>
         </FAQ>
       </div>
+
     </main>
   );
 }
