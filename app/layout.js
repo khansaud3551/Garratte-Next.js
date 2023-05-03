@@ -17,7 +17,7 @@ export const metadata = {
   title: "ManageHer",
   description: "Unlock the Secrets to Financial Freedom: Master OnlyFans Model Management and Skyrocket Your Income with ManageHer!",
   image: "/assets/logo.gif",
-  icon: "/assets/logo.gif",
+  icon: "/assets/logo-main.png",
 };
 
 export default function RootLayout({ children }) {

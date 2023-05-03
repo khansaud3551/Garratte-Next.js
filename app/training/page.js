@@ -23,10 +23,10 @@ const reviews = [
 ];
 
 const punchlineText = `
-Escape the 9-5 grind: Master OnlyFans model management and generate
-$10k-$30k/month in just 60 days. Acquire the skills and resources 
-necessary to excel in this lucrative business from the comfort of your home. 
-Embark on the journey to your dream career with ManageHer, starting today.
+How to leave your 9-5 gig, learn to manage models, and earn
+$10k-$30k/month within 60 days as a onlyfans manager. Gain the knowledge
+and tools you need to succeed in this business model from the comfort of
+your own home. Start building your dream career today through Manageher.
 `;
 
 const page = () => {
@@ -97,10 +97,6 @@ const page = () => {
         Free Training
       </button>
       <p className="text-center maven-font text-[30px] max-w-5xl mx-auto">
-        {/* How to leave your 9-5 gig, learn to manage models, and earn
-        $10k-$30k/month within 60 days as a onlyfans manager. Gain the knowledge
-        and tools you need to succeed in this business model from the comfort of
-        your own home. Start building your dream career today through Manageher. */}
         {punchlineText}
       </p>
       {/* <img
@@ -125,9 +121,6 @@ const page = () => {
       <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-8 my-14 md:my-28">
-        {/* <ClientReview img="assets/client_1.png" />
-        <ClientReview img="assets/client_2.png" />
-        <ClientReview img="assets/client_3.png" /> */}
         {reviews.map((client_review, index) => (
           <ClientReview
             img={`assets/client_${index + 1}.png`}
@@ -150,11 +143,6 @@ const page = () => {
           height={180}
         />
         <p className="text-center maven-font  md:text-[25px] max-w-5xl mx-auto">
-          {/* How to leave your 9-5 gig, learn to manage models, and earn
-          $10k-$30k/month within 60 days as a onlyfans manager. Gain the
-          knowledge and tools you need to succeed in this business model from
-          the comfort of your own home. Start building your dream career today
-          through Manageher. */}
           {punchlineText}
         </p>
         <form
