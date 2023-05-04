@@ -38,7 +38,6 @@ const page = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phoneNumber: "",
   });
 
   const handleChange = (e) => {
@@ -177,17 +176,17 @@ const page = () => {
             onChange={handleChange}
           /> */}
           {sending && (
-            <p className="mt-8 text-2xl font-bold text-center text-blue-500">
+            <p className="mt-8 text-2xl font-bold text-center">
               Sending you an email{dots}
             </p>
           )}
           {message && (
-            <p className="mt-8 text-2xl font-bold text-center text-green-400">
+            <p className="mt-8 text-2xl font-bold text-center ">
               {message}
             </p>
           )}
           {error && (
-            <p className="mt-8 text-2xl font-bold text-center text-red-500">
+            <p className="mt-8 text-2xl font-bold text-center">
               {error}
             </p>
           )}

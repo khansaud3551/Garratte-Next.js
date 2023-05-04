@@ -5,32 +5,32 @@ import React, { useState, useEffect, useRef } from "react";
 const reviews = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Mike Reeves",
     img: "assets/btn_img1.png",
     review:
-      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all he tools and knowledge i needed to succeed!",
+      "ManageHer's course was a game-changer! Comprehensive curriculum and hands-on assignments gave me the confidence to launch my agency with ease. Highly recommended!",
   },
   {
     id: 2,
-    name: "Tyler K",
+    name: "Tyler Kelly",
     img: "assets/btn_img3.png",
     review:
-      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all he tools and knowledge i needed to succeed!",
+      "I had no idea how to manage Only Fans until i took the ManageHer course. It gave me all he tools and knowledge i needed to succeed!",
   },
   {
     id: 2,
     name: "Jane Smith",
-    img: "assets/btn_img2.png",
+    img: "assets/btn_img5.png",
     review:
-      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all he tools and knowledge i needed to succeed!",
+      "The personalized mentorship and online community at ManageHer made all the difference! Experienced professionals provided invaluable insights, making starting my agency a breeze.",
   },
 
   {
     id: 3,
-    name: "Mike Johnson",
-    img: "assets/btn_img3.png",
+    name: "John Stevens",
+    img: "assets/btn_img4.png",
     review:
-      "I had no idea how to manage Only Fans until i took the Manage Her course. It gave me all he tools and knowledge i needed to succeed!",
+      "Thanks to ManageHer, I've successfully started my OnlyFans agency! In-depth knowledge, practical experience, and personalized support gave me all the tools I needed. Don't hesitate, just go for it!",
   },
 ];
 
@@ -83,16 +83,16 @@ export default VerticalSlider;
 const renderReview = (review, index) => (
   <div
     key={index}
-    className="flex items-center justify-center h-[290px] p-4 text-xl  bg-[#36393F]"
+    className="flex items-center justify-center p-4 text-xl bg-[#36393F]"
   >
-    <div className="flex  justify-center px-4 py-3">
+    <div className="flex justify-center px-4 py-3 space-y-4">
       <img
         src={review.img}
         alt={`${review.name}'s profile`}
         className="w-[50px] min-w-[50px] mr-5 object-cover h-[50px] mb-2 rounded-full"
       />
       <div>
-        <h3 className="text-2xl font-semibold mb-3 text-red-600">
+        <h3 className="mb-3 text-2xl font-semibold text-red-600">
           {review.name}
         </h3>
         <p>{review.review}</p>
@@ -100,19 +100,3 @@ const renderReview = (review, index) => (
     </div>
   </div>
 );
-
-// {
-//   reviews.map((review, index) => (
-//     <div
-//       key={review.id}
-//       className={`p-4 bg-black shadow-md rounded absolute w-full h-full transition-all duration-3000 ease-linear animate-scrolling`}
-//       style={{
-//         animationDelay: `${scrollingDelay(index)}ms`,
-//         animationDuration: `${reviews.length * 3000}ms`,
-//       }}
-//     >
-//       <h2 className="text-lg font-semibold">{review.name}</h2>
-//       <p className="mt-2">{review.review}</p>
-//     </div>
-//   ));
-// }

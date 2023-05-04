@@ -6,7 +6,7 @@ import Link from "next/link";
 const AwarenessBanner = () => {
   return (
     <div className="grid my-5 md:mt-[-20px]">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
         <div
           className="md:col-span-7 pt-0 md:pt-12 max-w-[645px] space-y-10 md:ml-[-10px]"
           style={{ lineHeight: "initial" }}
@@ -19,9 +19,9 @@ const AwarenessBanner = () => {
             will learn to create a 6 figure agency working from anywhere in the
             world.
           </p>
-          <div className="flex flex-col md:flex-row items-center gap-5">
+          <div className="flex flex-col items-center gap-5 md:flex-row">
             <Link href="/training">
-              <button className="px-8 maven-font font-bold text-xl py-4 rounded-xl bg-primary">
+              <button className="px-8 py-4 text-xl font-bold maven-font rounded-xl bg-primary">
                 Join ManageHer
               </button>
             </Link>
@@ -56,7 +56,7 @@ const AwarenessBanner = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-5 mt-10 md:mt-0">
+        <div className="mt-10 md:col-span-5 md:mt-0">
           <div className=" md:ml-auto w-full md:w-[380px] h-[500px]">
             <VerticalSlider />
           </div>
@@ -66,18 +66,18 @@ const AwarenessBanner = () => {
       {/* awareness cards here */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-8 my-14 md:my-28">
         <AwarenessCard
-          title="Expert Instruction"
-          description="This course is taught by a 3 year experienced Onlyfans Manager which will provide tips, tricks and techniques. With bonus incentives to jumpstart your agency!"
+          title="Comprehensive Knowledge and Strategy"
+          description="Our course covers all aspects of starting and managing a successful OnlyFans agency. Students learn to identify and recruit talent, create an online presence, and develop effective outreach strategies. We combine theoretical knowledge with real-world case studies for a well-rounded education."
           icon="/assets/tick.svg"
         />
         <AwarenessCard
-          title="Expert Instruction"
-          description="This course is taught by a 3 year experienced Onlyfans Manager which will provide tips, tricks and techniques. With bonus incentives to jumpstart your agency!"
+          title="Personalized Mentorship and Support"
+          description="We offer one-on-one mentorship from experienced professionals, providing valuable feedback and insights to help students succeed. Our online community through discord fosters networking, collaboration, and ongoing learning among students and alumni."
           icon="/assets/tick.svg"
         />
         <AwarenessCard
-          title="Expert Instruction"
-          description="This course is taught by a 3 year experienced Onlyfans Manager which will provide tips, tricks and techniques. With bonus incentives to jumpstart your agency!"
+          title="Hands-on Experience and Skill Development"
+          description="Our course emphasizes hands-on experience through practical assignments, ensuring students understand the theory and have the skills to start their own OnlyFans agency. Students create a complete agency blueprint, including a business plan, marketing strategy, and talent management system"
           icon="/assets/tick.svg"
         />
       </div>
@@ -88,17 +88,16 @@ const AwarenessBanner = () => {
 //Card component
 const AwarenessCard = ({ title, description, icon }) => {
   return (
-    <div className="col-span-12 md:col-span-6 lg:col-span-4 border-primary border rounded-xl">
+    <div className="col-span-12 border md:col-span-6 lg:col-span-4 border-primary rounded-xl">
       <div className="p-8 space-y-3">
-        <img className="mb-5" src="/assets/tick.svg" alt="" />
+        <img className="mb-5" src={icon} alt="" />
         <div>
-          <h3 className="text-2xl font-bold">Expert </h3>
-          <h3 className="text-2xl font-bold">Instruction</h3>
+          {/* <h3 className="text-2xl font-bold">Expert </h3>
+          <h3 className="text-2xl font-bold">Instruction</h3> */}
+          <h3 className="text-2xl font-bold">{title}</h3>
         </div>
         <p className="text-lg ">
-          This course is taught by a 3 year experienced Onlyfans Manager which
-          will provide tips, tricks and techniques. With bonus incentives to
-          jumpstart your agency!
+          {description}
         </p>
       </div>
     </div>
