@@ -2,6 +2,7 @@ import sgMail from "@sendgrid/mail";
 import { connectToDatabase } from "../../lib/mongodb";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/lib/emailValidator";
+import NextCors from "nextjs-cors";
 
 //export const static = true;
 
@@ -17,6 +18,12 @@ export async function POST(req, res) {
       .setHeader("Access-Control-Allow-Methods", "POST")
       .setHeader("Access-Control-Allow-Headers", "Content-Type");
   }
+
+  await NextCors(req, res, {
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    origin: "*",
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  });
 
   //get the form data name, email, message
   const body = await req.json();
