@@ -32,7 +32,7 @@ const FromPopup = ({ isModalOpen, handleModalClose }) => {
     e.preventDefault();
     setSending(true);
 
-    const res = await fetch("https://manageher.vercel.app/api/formhandle", {
+    const res = await fetch("api/formhandle", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
