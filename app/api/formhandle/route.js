@@ -12,9 +12,10 @@ sgMail.setApiKey(API_KEY);
 
 export async function POST(req, res) {
   // Handle preflight request
+  // Handle preflight request
   if (req.method === "OPTIONS") {
     return NextResponse.empty()
-      .setHeader("Access-Control-Allow-Origin", "*")
+      .setHeader("Access-Control-Allow-Origin", "https://manageher.io") // Update this line
       .setHeader("Access-Control-Allow-Methods", "POST")
       .setHeader("Access-Control-Allow-Headers", "Content-Type");
   }
