@@ -3,11 +3,21 @@ import { connectToDatabase } from "../../lib/mongodb";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/lib/emailValidator";
 
+//export const static = true;
+
 const API_KEY = process.env.SENDGRID_API_KEY;
 // console.log(API_KEY);
 sgMail.setApiKey(API_KEY);
 
 export async function POST(req, res) {
+  // Handle preflight request
+  if (req.method === "OPTIONS") {
+    return NextResponse.empty()
+      .setHeader("Access-Control-Allow-Origin", "*")
+      .setHeader("Access-Control-Allow-Methods", "POST")
+      .setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+
   //get the form data name, email, message
   const body = await req.json();
   const { name, email } = body;
