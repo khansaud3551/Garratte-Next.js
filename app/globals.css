@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -32,7 +34,7 @@ body {
 }
 
 .maven-font {
-  font-family: "__Maven_Pro_66aa57";
+  font-family: "Maven Pro", sans-serif;
 }
 
 .header {

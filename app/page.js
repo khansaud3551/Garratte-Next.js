@@ -6,7 +6,7 @@ import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <AwarenessBanner />
 
       <div className="border_divider w-[300px] md:w-[520px] h-[1px]"></div>
@@ -38,21 +38,27 @@ export default function Home() {
         </FAQ>
         <FAQ title="How long does the course take to complete ?">
           <p>
-            The course duration depends on the individual learner's pace, but most students complete it within 6-8 weeks. This allows you to absorb the information and apply your newfound skills effectively.
+            The course duration depends on the individual learner's pace, but
+            most students complete it within 6-8 weeks. This allows you to
+            absorb the information and apply your newfound skills effectively.
           </p>
         </FAQ>
         <FAQ title="Will I have access to the course materials after I complete the course ?">
           <p>
-            Absolutely! Once you complete the course, you'll continue to have lifetime access to all the course materials, enabling you to revisit the content and reinforce your learning whenever you need to.
+            Absolutely! Once you complete the course, you'll continue to have
+            lifetime access to all the course materials, enabling you to revisit
+            the content and reinforce your learning whenever you need to.
           </p>
         </FAQ>
         <FAQ title="Can I ask questions and get support from the instructors ?">
           <p>
-            Yes, you certainly can! Our instructors are dedicated to helping you succeed, so feel free to reach out to them with any questions or concerns you may have. They'll be more than happy to assist you and provide the support you need throughout your learning journey.
+            Yes, you certainly can! Our instructors are dedicated to helping you
+            succeed, so feel free to reach out to them with any questions or
+            concerns you may have. They'll be more than happy to assist you and
+            provide the support you need throughout your learning journey.
           </p>
         </FAQ>
       </div>
-
-    </main>
+    </>
   );
 }
