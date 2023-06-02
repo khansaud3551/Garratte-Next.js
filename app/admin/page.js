@@ -7,6 +7,7 @@ import htmlToDraft from "html-to-draftjs";
 import { useAuth } from "../authContext";
 import PrivateRoute from "../components/PrivateRoute";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import Link from "next/link";
 
 const AdminPageContent = () => {
   const { isAuthenticated } = useAuth();
@@ -66,12 +67,21 @@ const AdminPageContent = () => {
         editorClassName="editorClassName"
         onEditorStateChange={onEditorStateChange}
       />
-      <button
-        className="flex mx-auto px-8 py-4 text-xl font-bold maven-font rounded-xl bg-primary"
-        onClick={sendEmails}
-      >
-        Send Emails
-      </button>
+      <div className="flex justify-center gap-3">
+        <button
+          className="flex mx-auto px-8 py-4 text-xl font-bold maven-font rounded-xl bg-primary"
+          onClick={sendEmails}
+        >
+          Send Emails
+        </button>
+
+        <Link
+          href="/"
+          className="flex mx-auto px-8 py-4 text-xl font-bold maven-font rounded-xl bg-primary"
+        >
+          Back to Home Page
+        </Link>
+      </div>
     </div>
   );
 };
