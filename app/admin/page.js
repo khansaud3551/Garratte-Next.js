@@ -1,29 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import { EditorState, convertToRaw } from "draft-js";
-import { Editor } from "react-draft-wysiwyg";
-import draftToHtml from "draftjs-to-html";
-import htmlToDraft from "html-to-draftjs";
+// import { EditorState, convertToRaw } from "draft-js";
+// import { Editor } from "react-draft-wysiwyg";
+// import draftToHtml from "draftjs-to-html";
+// import htmlToDraft from "html-to-draftjs";
 import { useAuth } from "../authContext";
 import PrivateRoute from "../components/PrivateRoute";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Link from "next/link";
 
 const AdminPageContent = () => {
   const { isAuthenticated } = useAuth();
   console.log(isAuthenticated());
-
+  const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  // const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  const onEditorStateChange = (editorState) => {
-    setEditorState(editorState);
-  };
+  // const onEditorStateChange = (editorState) => {
+  //   setEditorState(editorState);
+  // };
 
   const sendEmails = async () => {
     alert("sendEmails");
 
-    const message = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+    // const message = draftToHtml(convertToRaw(editorState.getCurrentContent()));
 
     // Post request to sendemailall
     try {
@@ -60,12 +60,12 @@ const AdminPageContent = () => {
         onChange={(e) => setSubject(e.target.value)}
         placeholder="Subject"
       />
-      <Editor
-        editorState={editorState}
-        toolbarClassName="toolbarClassName"
-        wrapperClassName="wrapperClassName"
-        editorClassName="editorClassName"
-        onEditorStateChange={onEditorStateChange}
+      <textarea
+        value={message}
+        required
+        className="w-full p-3 text-black bg-white md:p-6 md:text-xl focus:outline-none rounded-xl"
+        onChange={(e) => setMessage(e.target.value)}
+        placeholder="Message"
       />
       <div className="flex justify-center gap-3">
         <button
