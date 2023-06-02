@@ -30,8 +30,8 @@ export async function POST(req, res) {
     to: recipient.email,
     from: "tyler@manageher.io",
     subject: subject,
-    text: "Hello from the Admin Page",
-    html: `<strong>${message}</strong>`,
+    text: "test",
+    html: message,
   }));
 
   try {

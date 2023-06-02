@@ -11,6 +11,7 @@ const PrivateRoute = (WrappedComponent) => {
 
     useEffect(() => {
       console.log(isAuthenticated());
+
       if (!isAuthenticated()) {
         console.log(isAuthenticated());
         router.push("/login");

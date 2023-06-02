@@ -22,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full flex justify-center items-center mt-[300px]">
+    <div className="w-full flex justify-center items-center h-screen">
       <form className="space-y-7" onSubmit={handleSubmit}>
         <h1 className="text-center text-2xl">
           Enter the username and password for the admin page
