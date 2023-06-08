@@ -1,12 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import { EditorState, convertToRaw } from "draft-js";
-import { Editor } from "react-draft-wysiwyg";
+import dynamic from "next/dynamic";
 import draftToHtml from "draftjs-to-html";
 import { useAuth } from "../authContext";
 import PrivateRoute from "../components/PrivateRoute";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Link from "next/link";
+
+const DynamicEditor = dynamic(
+  () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
+  { ssr: false }
+);
 
 const AdminPageContent = () => {
   const { isAuthenticated } = useAuth();
@@ -59,7 +64,7 @@ const AdminPageContent = () => {
         onChange={(e) => setSubject(e.target.value)}
         placeholder="Subject"
       />
-      <Editor
+      <DynamicEditor
         editorState={editorState}
         toolbarClassName="toolbarClassName"
         wrapperClassName="wrapperClassName"
