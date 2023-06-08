@@ -30,8 +30,14 @@ export async function POST(req, res) {
     to: recipient.email,
     from: "tyler@manageher.io",
     subject: subject,
-    text: "test",
+    // text: "test",
     html: message,
+    // templateId: 'second-template-id', // The ID of the template you've created
+    //we need to send the html and the name to the template
+    //   dynamic_template_data: {
+    //     name: name,
+    //     html: html,
+    //  },
   }));
 
   try {

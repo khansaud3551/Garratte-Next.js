@@ -11,7 +11,6 @@ sgMail.setApiKey(API_KEY);
 
 export async function POST(req, res) {
   // Handle preflight request
-  // Handle preflight request
   if (req.method === "OPTIONS") {
     return NextResponse.empty()
       .setHeader("Access-Control-Allow-Origin", "https://manageher.io") // Update this line
@@ -39,19 +38,31 @@ export async function POST(req, res) {
     submittedAt: new Date(),
   };
 
+  // Check if the email already exists in the database
+  const existingEmail = await db
+    .collection("contacts")
+    .findOne({ email: email });
+
+  if (existingEmail) {
+    return NextResponse.json(
+      {
+        error: true,
+        message: "Email already exists.",
+      },
+      {
+        status: 401,
+      }
+    );
+  }
+
+  // If email doesn't exist, insert it into the database
   const result = await db.collection("contacts").insertOne(formData);
 
   // Send the customized email to the user
   const msg = {
     to: email,
-    // from: "k.klassic44@gmail.com", // Update this with the verified email address or an email from the verified domain
     from: "tyler@manageher.io",
-    // templateId: "d-886d0b0e96e94b64b6dea64acd28d6aa", // Your SendGrid template ID
     templateId: "d-41f5092e7c2f454d841924091f168799", // Your SendGrid template ID
-    // dynamic_template_data: {
-    //   name: name,
-    //   website: "test",
-    // },
     subject:
       "Unlock the Secrets to Managing OnlyFans Models and Skyrocket Your Business",
   };
@@ -76,14 +87,4 @@ export async function POST(req, res) {
     //use Response to send error
     Response.json({ error: "Message not sent." });
   }
-
-  // message submitted successfully using res
-  return NextResponse.json(
-    {
-      message: "Message sent successfully!",
-    },
-    {
-      status: 200,
-    }
-  );
 }

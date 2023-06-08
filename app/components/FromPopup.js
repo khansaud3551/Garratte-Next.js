@@ -121,7 +121,9 @@ const FromPopup = ({ isModalOpen, handleModalClose }) => {
             <p className="mt-8 text-2xl font-bold text-center ">{message}</p>
           )}
           {error && (
-            <p className="mt-8 text-2xl font-bold text-center">{error}</p>
+            <p className="mt-8 text-2xl text-red-600 font-bold text-center">
+              {error}
+            </p>
           )}
           <div>
             <button
