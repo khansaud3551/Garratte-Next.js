@@ -50,12 +50,12 @@ const Decision = () => {
             </div>
 
             <div className="space-y-1 ">
-              <h3 className="text-base line-through text-primary">$1500</h3>
-              <h1 className="text-5xl font-bold">$999</h1>
+              <h3 className="text-base line-through text-primary">$1000</h3>
+              <h1 className="text-5xl font-bold">$499</h1>
             </div>
           </div>
           <div className="px-2">
-            <Link href="https://sso.teachable.com/secure/1564605/checkout/4691443/manageher">
+            <Link href="https://manageher1.teachable.com/purchase?product_id=4872024">
               <button className="w-full p-10 text-lg font-semibold text-white rounded-t-none bg-primary rounded-xl">
                 Enroll now
               </button>
